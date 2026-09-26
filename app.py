@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    nombre = "Estudiante UTTT"
     return f"<h1>Bienvenido al portal universitario, {nombre}!</h1>"
 
 if __name__ == '__main__':
