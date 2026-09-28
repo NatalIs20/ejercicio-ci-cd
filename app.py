@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     nombre = "Estudiante UTTT"
-    return f"<h1>Bienvenido al portal universitario, {nombre}!</h1>"
+    return f"<h1>Bienvenido al portal universitario, {nombre}! Nueva version</h1>"
 
 @app.route('/api/status')
 def status():
