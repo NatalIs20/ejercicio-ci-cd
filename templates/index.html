@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal Universitario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Bienvenido al portal universitario, {{ nombre }}!</h1>
+    <p>Estado del sistema: <strong>activo</strong></p>
+    <a href="/trabajos">Ver trabajos</a>
+</body>
+</html>
