@@ -1,47 +1,39 @@
 # Portal Universitario CI/CD
 
-Aplicación web desarrollada con **Flask** que simula el portal universitario de la UTTT, incluyendo un módulo de estado del sistema y un módulo de gestión de trabajos/proyectos.
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Flask](https://img.shields.io/badge/Flask-3.0.3-black)
+![Docker](https://img.shields.io/badge/Docker-ready-2496ED)
 
-## Descripción
+> **Una plataforma universitaria que se despliega en minutos, no en semanas.**
 
-Este proyecto fue creado como práctica de **Integración y Despliegue Continuo (CI/CD)** utilizando Git, GitHub y Docker. Incluye:
+## Problema
+Las instituciones educativas gestionan trabajos, proyectos y el estado de sus
+sistemas mediante herramientas dispersas, difíciles de desplegar y de mantener.
 
-- Página principal con mensaje de bienvenida
-- Endpoint de estado del sistema (`/api/status`)
-- Módulo de trabajos con listado y detalle (`/trabajos`)
+## Solución
+Portal Universitario CI/CD centraliza en una sola aplicación:
 
-## Instalación
+- **Monitoreo del estado del sistema** en tiempo real (`/api/status`)
+- **Gestión de trabajos y proyectos** con listado y detalle (`/trabajos`)
+- **Despliegue con un solo comando** mediante Docker, sin configuración manual
 
-Clona el repositorio:
+## Ventajas competitivas
+- **Listo para producción:** contenerizado y reproducible en cualquier entorno.
+- **Ligero y escalable:** construido sobre Flask, con facilidad para incorporar nuevos módulos.
+- **Desarrollo profesional:** control de versiones, pull requests y prácticas CI/CD desde el inicio.
 
+## Inicio rápido
 ```bash
 git clone https://github.com/NatalIs20/ejercicio-ci-cd.git
 cd ejercicio-ci-cd
-```
-
-Instala las dependencias:
-
-```bash
-pip install -r requirements.txt
-```
-
-Ejecuta la aplicación:
-
-```bash
-python app.py
-```
-
-## 🐳 Uso con Docker
-
-```bash
 docker build -t ejercicio-ci-cd .
 docker run -d -p 5000:5000 --name portal ejercicio-ci-cd
 ```
+La aplicación estará disponible en http://localhost:5000.
 
-La aplicación estará disponible en `http://localhost:5000`.
+Instalación sin Docker: `pip install -r requirements.txt` y `python app.py`.
 
 ## Endpoints disponibles
-
 | Ruta | Método | Descripción |
 |------|--------|-------------|
 | `/` | GET | Página principal de bienvenida |
@@ -49,12 +41,14 @@ La aplicación estará disponible en `http://localhost:5000`.
 | `/trabajos` | GET | Lista de trabajos registrados |
 | `/trabajos/<id>` | GET | Detalle de un trabajo por ID |
 
-## Tecnologías utilizadas
+## Hoja de ruta
+- [ ] Autenticación de estudiantes y docentes
+- [ ] Panel de administración
+- [ ] Integración con base de datos
+- [ ] Pipeline de despliegue automatizado (GitHub Actions)
 
-- Python 3.10
-- Flask 3.0.3
-- Docker
+## Tecnologías
+Python 3.10 · Flask 3.0.3 · Docker · Git/GitHub
 
 ## Autora
-
-Natali Isabel Chavez Alpizar — UTTT, Ingeniería en Redes y Ciberseguridad
+Natali Isabel Chavez Alpizar — Ingeniería en Redes y Ciberseguridad, UTTT
